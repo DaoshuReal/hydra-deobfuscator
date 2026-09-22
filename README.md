@@ -1,6 +1,6 @@
 # hydra-deobfuscator - Hydra-protected .NET deobfuscator
 
-i wanted to actually read a Hydra-obfuscated .NET assembly instead of scrolling through state machines, encrypted strings and proxy calls. so i built hydra-deobfuscator, a small dnlib-based deobfuscator that recovers the Hail key, inlines int/string proxies, decrypts strings, linearizes switch dispatchers and strips the leftover junk.
+i wanted to actually read a Hydra-obfuscated .NET assembly instead of scrolling through state machines, encrypted strings and proxy calls. the obfuscator in question is Hydra (https://github.com/DestroyerDarkNess/Hydra). so i built hydra-deobfuscator, a small dnlib-based deobfuscator that recovers the Hail key, inlines int/string proxies, decrypts strings, linearizes switch dispatchers and strips the leftover junk.
 
 to be clear: this is a poc that grew into a tool, not a universal Hydra unpacker. it was built and tested against one Hydra config on one sample (`mod.dll`: 240 types / 9921 methods in, 133 types / 549 methods out). everything below about what it handles is stuff i verified on that sample, not a promise about other configs.
 
